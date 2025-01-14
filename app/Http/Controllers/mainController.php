@@ -8,7 +8,11 @@ use Spatie\FlareClient\View;
 class mainController extends Controller
 {
     //
-    public function index(){
-        return view('template');
+    public function landing(){
+        return view('pages.landing');
+    }
+    
+    public function display(){
+        return view('pages.display');
     }
 }

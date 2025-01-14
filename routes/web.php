@@ -19,10 +19,12 @@ Route::get('/', function () {
 });
 
 Route::prefix('/')->group(function () {
-    Route::get('/',[mainController::class,'index'])->name('agenda');
-    Route::get('/tambah',[mainController::class,'tambah'])->name('agenda.tambah');
-    Route::post('/simpan',[mainController::class,'simpan'])->name('agenda.simpan');
-    Route::delete('/hapus{id}',[mainController::class,'hapus'])->name('agenda.hapus');
-    Route::get('/edit{id}',[mainController::class,'edit'])->name('agenda.edit');
-    Route::post('/update{id}',[mainController::class,'update'])->name('agenda.update');
+    Route::get('/',[mainController::class,'landing'])->name('pelayanan');
+    Route::get('/display',[mainController::class,'display'])->name('display');
+    
+    // Route::get('/tambah',[mainController::class,'tambah'])->name('pelayanan.tambah');
+    // Route::post('/simpan',[mainController::class,'simpan'])->name('pelayanan.simpan');
+    // Route::delete('/hapus{id}',[mainController::class,'hapus'])->name('pelayanan.hapus');
+    // Route::get('/edit{id}',[mainController::class,'edit'])->name('pelayanan.edit');
+    // Route::post('/update{id}',[mainController::class,'update'])->name('pelayanan.update');
 });
