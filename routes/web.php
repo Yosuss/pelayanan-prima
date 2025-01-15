@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\inputController;
 use App\Http\Controllers\mainController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,10 +22,12 @@ Route::get('/', function () {
 Route::prefix('/')->group(function () {
     Route::get('/',[mainController::class,'landing'])->name('pelayanan');
     Route::get('/display',[mainController::class,'display'])->name('display');
-    
-    // Route::get('/tambah',[mainController::class,'tambah'])->name('pelayanan.tambah');
-    // Route::post('/simpan',[mainController::class,'simpan'])->name('pelayanan.simpan');
-    // Route::delete('/hapus{id}',[mainController::class,'hapus'])->name('pelayanan.hapus');
-    // Route::get('/edit{id}',[mainController::class,'edit'])->name('pelayanan.edit');
-    // Route::post('/update{id}',[mainController::class,'update'])->name('pelayanan.update');
+});
+
+Route::prefix('/input')->group(function () {
+    Route::get('/',[inputController::class,'input'])->name('input');    
+    Route::post('/simpan',[inputController::class,'simpan'])->name('input.simpan');
+    // Route::delete('/hapus{id}',[inputController::class,'hapus'])->name('input.hapus');
+    // Route::get('/edit{id}',[inputController::class,'edit'])->name('input.edit');
+    // Route::post('/update{id}',[inputController::class,'update'])->name('input.update');
 });
