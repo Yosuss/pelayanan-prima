@@ -16,8 +16,8 @@ return new class extends Migration
             $table->id('id_input'); // Primary key
             $table->string('zona')->nullable();
             $table->string('unit')->nullable();
-            $table->string('kode_wilayah')->nullable();
-            $table->string('kode_blok')->nullable();
+            $table->string('kode_wilayah');
+            $table->string('kode_blok');
             $table->string('no_ktp')->nullable();
             $table->string('nama');
             $table->string('email')->nullable();
@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('rt');
             $table->string('rw');
             $table->string('no_hp');
+            $table->string('pekerjaan')->nullable();
             $table->string('tetap')->nullable();
             $table->string('tidak_tetap')->nullable();
             $table->string('tarif')->nullable();
@@ -36,10 +37,9 @@ return new class extends Migration
             $table->string('bp')->nullable();
             $table->string('nilai_bp')->nullable();
             $table->string('clamb')->nullable();
-            $table->string('tanggal')->nullable();
+            $table->string('tanggal');
             $table->timestamps(); // created_at dan updated_at
         });
-
     }
 
     /**

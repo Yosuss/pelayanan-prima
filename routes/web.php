@@ -22,12 +22,10 @@ Route::get('/', function () {
 Route::prefix('/')->group(function () {
     Route::get('/',[mainController::class,'landing'])->name('pelayanan');
     Route::get('/display',[mainController::class,'display'])->name('display');
+    // Route::get('/sortir-data',[mainController::class,'sortir_data'])->name('sortir-data');
 });
 
 Route::prefix('/input')->group(function () {
     Route::get('/',[inputController::class,'input'])->name('input');    
     Route::post('/simpan',[inputController::class,'simpan'])->name('input.simpan');
-    // Route::delete('/hapus{id}',[inputController::class,'hapus'])->name('input.hapus');
-    // Route::get('/edit{id}',[inputController::class,'edit'])->name('input.edit');
-    // Route::post('/update{id}',[inputController::class,'update'])->name('input.update');
 });
