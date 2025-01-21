@@ -16,7 +16,7 @@ class mainController extends Controller
     public function display(Request $request)
     {
         // Periksa apakah ada input tanggal
-        $query = input::query(); // Ganti dengan model Anda
+        $query = input::query(); 
     
         if ($request->has('start_date') && $request->has('end_date')) {
             $request->validate([
