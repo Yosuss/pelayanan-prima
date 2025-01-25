@@ -33,4 +33,4 @@ class mainController extends Controller
     
         return view('pages.display', compact('data'));
     }
-    }
+}

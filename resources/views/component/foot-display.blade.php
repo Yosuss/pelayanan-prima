@@ -18,8 +18,8 @@
     </div>
 
     <div class="fungsi w-full p-5 flex gap-4">
-        <button class="p-[3rem] border-b border-r shadow-sm capitalize border-black rounded-lg"><i class="bi bi-eye"></i> tampikan</button>
-        <button class="p-[3rem] border-b border-r shadow-sm capitalize border-black rounded-lg"><i class="bi bi-printer"></i> cetak</button>
+        {{-- <button class="p-[3rem] border-b border-r shadow-sm capitalize border-black rounded-lg"><i class="bi bi-eye"></i> tampikan</button>
+        <button class="p-[3rem] border-b border-r shadow-sm capitalize border-black rounded-lg"><i class="bi bi-printer"></i> cetak</button> --}}
         <a href="{{ url('/') }}">
             <button class="p-[3rem] border-b border-r shadow-sm capitalize border-black rounded-lg"><i class="bi bi-box-arrow-right"></i> keluar</button>
         </a>
